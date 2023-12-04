@@ -1,17 +1,184 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 7 | @import "font";
- *   |         ^^^^^^
- *   '
- *   assets/scss/main.scss 7:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 7 \2502  @import \"font\";\a   \2502          ^^^^^^\a   \2575 \a   assets/scss/main.scss 7:9  root stylesheet";
+/* ========== IMPORTS ========== */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.ttf");
 }
+@font-face {
+  font-family: "WorkSans";
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
+/* ========== GLOBAL STYLES ========== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* ========== HEADER ========== */
+header {
+  padding: 150px 4rem 150px 4rem;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+header article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header article h1 {
+  font-size: 4rem;
+  line-height: 3rem;
+}
+header article h1 span {
+  color: #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+}
+header article p {
+  font-family: "WorkSans";
+  font-size: 0.625rem;
+}
+header div {
+  padding-top: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header div img {
+  height: 42px;
+}
+header div a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "WorkSans";
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+}
+
+/* ========== MAIN ========== */
+main .sc__beginning {
+  padding-left: 4rem;
+  padding-bottom: 100px;
+  background-color: #000000;
+  color: #ffffff;
+}
+main .sc__beginning h2 {
+  font-family: "Inter";
+  font-size: 5.875rem;
+  width: 80vw;
+}
+main .sc__beginning .div__california {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: calc(100vw - 4rem);
+  height: 540px;
+  margin-top: 4rem;
+}
+main .sc__beginning .div__california article .p__1 {
+  font-family: "WorkSans";
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+main .sc__beginning .div__california article .p__2 {
+  font-family: "Inter";
+  font-size: 5.375rem;
+  margin-bottom: 0.5rem;
+}
+main .sc__beginning .div__california img {
+  height: 100%;
+}
+main .sc__action {
+  position: relative;
+  height: 1860px;
+  padding-left: 4rem;
+}
+main .sc__action .article__action {
+  height: 100%;
+  width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+main .sc__action .article__action h2 {
+  font-family: "Inter";
+  font-size: 5.25rem;
+}
+main .sc__action .article__action p {
+  font-family: "WorkSans";
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+main .sc__action .img__action {
+  position: absolute;
+}
+main .sc__action #img1 {
+  width: 330px;
+  height: 220px;
+  top: -82px;
+  right: 110px;
+  bottom: "";
+  left: "";
+}
+main .sc__action #img2 {
+  width: 280px;
+  height: 180px;
+  top: 280px;
+  right: "";
+  bottom: "";
+  left: 4rem;
+}
+main .sc__action #img3 {
+  width: 280px;
+  height: 180px;
+  top: 666px;
+  right: 0px;
+  bottom: "";
+  left: "";
+}
+main .sc__action #img4 {
+  width: 330px;
+  height: 220px;
+  top: 876px;
+  right: 0px;
+  bottom: "";
+  left: 220px;
+}
+main .sc__action #img5 {
+  width: 330px;
+  height: 220px;
+  top: 1080px;
+  right: "";
+  bottom: "";
+  left: 820px;
+}
+main .sc__action #img6 {
+  width: 280px;
+  height: 180px;
+  top: 1362px;
+  right: "";
+  bottom: "";
+  left: 4rem;
+}
+main .sc__action #img7 {
+  width: 440px;
+  height: 300px;
+  top: "";
+  right: center;
+  bottom: 0px;
+  left: "";
+  transform: translateX(50%);
+}
+
+/*# sourceMappingURL=style.css.map */

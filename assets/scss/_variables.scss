@@ -2,11 +2,25 @@
 $color-black: #000000;
 $color-white: #ffffff;
 $color-grey: rgb(245, 245, 245);
+
 $max-width: 1920px;
+
+$font-size: 16px;
+
+$padding-side: 4rem;
+
 
 
 //======= Header ===== //
 
-$header-margin-top: 150px;
+$header-top: 150px;
+$header-middle: 260px;
+$h1-font-size: 4rem;
+
+$p-header-font-size: 0.625rem;
 
 //======= Main ===== //
+
+$margin-div_info: 4rem;
+
+$width-action-string: 480px;

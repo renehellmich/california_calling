@@ -1,0 +1,58 @@
+//======= Global ===== //
+
+@mixin flex_center_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+@mixin flex_center_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex_between_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin flex_between_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin aTag($deco, $color) {
+    // width: $width;
+    // height: $height;
+    text-decoration: $deco;
+    color: $color;
+}
+
+@mixin fontdef($family, $size) {
+    font-family: $family;
+    font-size: $size;
+}
+
+
+//======= Header ===== //
+@mixin textStroke($width, $color) {
+    -webkit-text-stroke-width: $width;
+    -webkit-text-stroke-color: $color;
+}
+
+
+//======= Main ===== //
+
+@mixin imgXZPos($width, $height, $top, $right, $bottom, $left) {
+    width: $width;
+    height: $height;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+//======= Footer ===== //

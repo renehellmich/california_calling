@@ -1,11 +1,163 @@
 /* ========== IMPORTS ========== */
 
-@use 'variables' as variables; 
+@use 'variables' as var;
 
-@use 'mixin' as mixins;
+@use 'mixin' as mix;
 
-@import "font";
+@import 'fonts';
 
 
 /* ========== GLOBAL STYLES ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+html {
+    font-size: var.$font-size;
+}
+
+/* ========== HEADER ========== */
+header {
+    padding: var.$header-top var.$padding-side var.$header-top var.$padding-side;
+    background: var.$color-black;
+    color: var.$color-white;
+    text-align: center;
+
+    article {
+        @include mix.flex_center_column;
+
+        h1 {
+            font-size: var.$h1-font-size;
+            line-height: 3rem;
+
+            span {
+                color: var.$color-black;
+                @include mix.textStroke(2px, var.$color-white)
+            }
+        }
+
+        p {
+            @include mix.fontdef('WorkSans', var.$p-header-font-size)
+        }
+    }
+
+    div {
+        padding-top: var.$header-middle;
+        @include mix.flex_between_row;
+
+        img {
+            height: 42px;
+        }
+
+        a {
+            @include mix.aTag(none, var.$color-white);
+            @include mix.fontdef('WorkSans', 1.25rem);
+            padding: 1rem 2rem;
+            border: 1px solid var.$color-white;
+        }
+    }
+}
+
+/* ========== MAIN ========== */
+
+main {
+    .sc__beginning {
+        padding-left: var.$padding-side;
+        padding-bottom: 100px;
+        background-color: var.$color-black;
+        color: var.$color-white;
+        // position: relative;
+
+        h2 {
+            @include mix.fontdef('Inter', 5.875rem);
+            width: 80vw;
+        }
+
+        .div__california {
+            @include mix.flex_between_row;
+            align-items: flex-end;
+            width: calc(100vw - var.$padding-side);
+            height: 540px;
+            margin-top: var.$margin-div_info;
+
+            article {
+                .p__1 {
+                    @include mix.fontdef('WorkSans', 0.875rem);
+                    margin-bottom: .5rem
+                }
+
+                .p__2 {
+                    @include mix.fontdef('Inter', 5.375rem);
+                    margin-bottom: .5rem
+                }
+            }
+            img {
+                height: 100%
+            }
+        }
+    }
+    .sc__action {
+        position: relative;
+        height: 1860px;
+        padding-left: var.$padding-side;
+        
+        .article__action {
+            height: 100%;
+            width: var.$width-action-string;
+            margin: 0 auto;
+            @include mix.flex_between_column;
+            justify-content: space-around;
+
+            h2 {
+                @include mix.fontdef('Inter', 5.25rem)
+            }
+            p {
+                @include mix.fontdef('WorkSans', 1rem);
+                line-height: 1.875rem;
+            }
+        }
+
+        .img__action {
+            position: absolute;
+        }
+        #img1 {
+            @include mix.imgXZPos(
+                330px, 220px, -82px, 110px, "", ""
+            )
+        }
+        #img2 {
+            @include mix.imgXZPos(
+                280px, 180px, 280px, "", "", var.$padding-side
+            )
+        }
+        #img3 {
+            @include mix.imgXZPos(
+                280px, 180px, 666px, 0px, "", ""
+            )
+        }
+        #img4 {
+            @include mix.imgXZPos(
+                330px, 220px, 876px, 0px, "", 220px
+            )
+        }
+        #img5 {
+            @include mix.imgXZPos(
+                330px, 220px, 1080px, "", "", 820px
+            )
+        }
+        #img6 {
+            @include mix.imgXZPos(
+                280px, 180px, 1362px, "", "", var.$padding-side
+            )
+        }
+        #img7 {
+            @include mix.imgXZPos(
+                440px, 300px, "", center, 0px, ""
+            );
+            transform: translateX(50%);
+        }
+        
+    }
+}
