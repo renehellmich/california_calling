@@ -16,6 +16,7 @@
 
 html {
     font-size: var.$font-size;
+    @include mix.central;
 }
 
 /* ========== HEADER ========== */
@@ -78,7 +79,7 @@ main {
         .div__california {
             @include mix.flex_between_row;
             align-items: flex-end;
-            width: calc(100vw - var.$padding-side);
+            width: calc(100% - var.$padding-side);
             height: 540px;
             margin-top: var.$margin-div_info;
 
@@ -105,6 +106,7 @@ main {
     .sc__action {
         position: relative;
         height: 1860px;
+        max-width: var.$max-width;
         padding-left: var.$padding-side;
 
         .article__action {

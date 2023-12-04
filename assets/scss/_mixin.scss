@@ -1,5 +1,5 @@
 //======= Global ===== //
-
+@use 'variables' as var;
 @mixin flex_center_column {
     display: flex;
     flex-direction: column;
@@ -34,6 +34,11 @@
 @mixin fontdef($family, $size) {
     font-family: $family;
     font-size: $size;
+}
+
+@mixin central {
+    max-width: var.$max-width;
+    margin: 0 auto;
 }
 
 

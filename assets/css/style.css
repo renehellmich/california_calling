@@ -16,6 +16,8 @@
 
 html {
   font-size: 16px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* ========== HEADER ========== */
@@ -85,7 +87,7 @@ main .sc__beginning .div__california {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  width: calc(100vw - 4rem);
+  width: calc(100% - 4rem);
   height: 540px;
   margin-top: 4rem;
 }
@@ -105,6 +107,7 @@ main .sc__beginning .div__california img {
 main .sc__action {
   position: relative;
   height: 1860px;
+  max-width: 1920px;
   padding-left: 4rem;
 }
 main .sc__action .article__action {
