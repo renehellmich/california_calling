@@ -93,16 +93,20 @@ main {
                     margin-bottom: .5rem
                 }
             }
+
             img {
                 height: 100%
             }
         }
     }
+
+    /* ========== Section Action ========== */
+
     .sc__action {
         position: relative;
         height: 1860px;
         padding-left: var.$padding-side;
-        
+
         .article__action {
             height: 100%;
             width: var.$width-action-string;
@@ -113,6 +117,7 @@ main {
             h2 {
                 @include mix.fontdef('Inter', 5.25rem)
             }
+
             p {
                 @include mix.fontdef('WorkSans', 1rem);
                 line-height: 1.875rem;
@@ -122,42 +127,98 @@ main {
         .img__action {
             position: absolute;
         }
+
         #img1 {
-            @include mix.imgXZPos(
-                330px, 220px, -82px, 110px, "", ""
+            @include mix.imgXZPos(330px, 220px, -82px, 110px, "", ""
             )
         }
+
         #img2 {
-            @include mix.imgXZPos(
-                280px, 180px, 280px, "", "", var.$padding-side
-            )
+            @include mix.imgXZPos(280px, 180px, 280px, "", "", var.$padding-side )
         }
+
         #img3 {
-            @include mix.imgXZPos(
-                280px, 180px, 666px, 0px, "", ""
+            @include mix.imgXZPos(280px, 180px, 666px, 0px, "", ""
             )
         }
+
         #img4 {
-            @include mix.imgXZPos(
-                330px, 220px, 876px, 0px, "", 220px
-            )
+            @include mix.imgXZPos(330px, 220px, 876px, 0px, "", 220px)
         }
+
         #img5 {
-            @include mix.imgXZPos(
-                330px, 220px, 1080px, "", "", 820px
-            )
+            @include mix.imgXZPos(330px, 220px, 1080px, "", "", 820px)
         }
+
         #img6 {
-            @include mix.imgXZPos(
-                280px, 180px, 1362px, "", "", var.$padding-side
-            )
+            @include mix.imgXZPos(280px, 180px, 1362px, "", "", var.$padding-side )
         }
+
         #img7 {
-            @include mix.imgXZPos(
-                440px, 300px, "", center, 0px, ""
+            @include mix.imgXZPos(440px, 300px, "", center, 0px, ""
             );
             transform: translateX(50%);
         }
-        
+
     }
+
+    /* ========== Golden Bear ========== */
+
+    .sc__golden-bear {
+        height: 1320px;
+        margin: 0 auto;
+        @include mix.blackwhite(var.$color-white, var.$color-black);
+        @include mix.flex_between_column;
+        justify-content: space-between;
+        
+        .div__bear_description {
+            width: var.$width-bear;
+            margin: 0 auto;
+            margin-top: 180px;
+
+            .p__page {
+                @include mix.fontdef('WorkSans', 1.25rem)
+            }
+            
+            .div__descr-flex {
+                @include mix.flex_between_row;
+                justify-content: space-between;
+                h3 {
+                    @include mix.fontdef('Inter', 5.25rem);
+                }
+                
+                .p__description {
+                    @include mix.fontdef('Inter', 1.75rem);
+                    width: 540px;
+                    span {
+                        @include mix.fontdef('WorkSans', 1.125rem);
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+
+        .div__bear_img {
+            position: relative;
+            width: var.$width-bear;
+            margin: 0 auto;
+        }
+
+        .img__bear {
+            position: absolute;
+        }
+
+        #img_big-bear {
+            @include mix.imgXZPos(var.$width-big, var.$height-big, "", "", 0, ""
+            );
+            @include mix.transform("", 20%);
+        }
+
+        #img_small-bear {
+            @include mix.imgXZPos(var.$width-small, var.$height-small, "", "", 0, 60%);
+            @include mix.transform(50%, 10%)
+        }
+    }
+
+    /* ========== SC ROUND ========== */
 }

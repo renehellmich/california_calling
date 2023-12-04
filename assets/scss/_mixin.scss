@@ -55,4 +55,14 @@
     left: $left;
 }
 
+@mixin blackwhite($color, $backcolor) {
+    color: $color;
+    background-color: $backcolor;
+}
+
+@mixin transform($transX, $transY) {
+    transform: translateX($transX);
+    transform: translateY($transY);
+}
+
 //======= Footer ===== //
