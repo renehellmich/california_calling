@@ -41,6 +41,9 @@
     margin: 0 auto;
 }
 
+@mixin overflow($expression) {
+    overflow: $expression
+}
 
 //======= Header ===== //
 @mixin textStroke($width, $color) {
@@ -68,6 +71,12 @@
 @mixin transform($transX, $transY) {
     transform: translateX($transX);
     transform: translateY($transY);
+}
+
+@mixin rotate($transX, $transY, $transZ) {
+    transform: rotateX($transX);
+    transform: rotateY($transY);
+    transform: rotateZ($transZ);
 }
 
 @mixin threesixty {

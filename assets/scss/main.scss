@@ -172,7 +172,7 @@ main {
         @include mix.blackwhite(var.$color-white, var.$color-black);
         @include mix.flex_between_column;
         justify-content: space-between;
-        
+
         .div__bear_description {
             width: var.$width-bear;
             margin: 0 auto;
@@ -181,17 +181,19 @@ main {
             .p__page {
                 @include mix.fontdef('WorkSans', 1.25rem)
             }
-            
+
             .div__descr-flex {
                 @include mix.flex_between_row;
                 justify-content: space-between;
+
                 h3 {
                     @include mix.fontdef('Inter', 5.25rem);
                 }
-                
+
                 .p__description {
                     @include mix.fontdef('Inter', 1.75rem);
                     width: 540px;
+
                     span {
                         @include mix.fontdef('WorkSans', 1.125rem);
                         line-height: 2rem;
@@ -227,6 +229,8 @@ main {
     .sc__round-img {
         height: var.$round-img;
         position: relative;
+        @include mix.overflow(hidden);
+
         img {
             position: absolute;
             @include mix.imgXZPos(var.$round-img, var.$round-img, -100px, -137px, "", "");
@@ -244,7 +248,7 @@ main {
         @include mix.blackwhite(var.$color-black, var.$color-grey);
         @include mix.flex_between_column;
         justify-content: space-between;
-        
+
         .div__bear_description {
             width: var.$width-bear;
             margin: 0 auto;
@@ -253,17 +257,19 @@ main {
             .p__page {
                 @include mix.fontdef('WorkSans', 1.25rem)
             }
-            
+
             .div__descr-flex {
                 @include mix.flex_between_row;
                 justify-content: space-between;
+
                 h3 {
                     @include mix.fontdef('Inter', 5.25rem);
                 }
-                
+
                 .p__description {
                     @include mix.fontdef('Inter', 1.75rem);
                     width: 540px;
+
                     span {
                         @include mix.fontdef('WorkSans', 1.125rem);
                         line-height: 2rem;
@@ -285,8 +291,7 @@ main {
         #img_big-bear {
             // @include mix.imgXZPos(var.$width-big, var.$height-big, "", "", 0, ""
             // );
-            @include mix.imgXZPos(var.$width-big, var.$height-big, "", "", 0, 40%
-            );
+            @include mix.imgXZPos(var.$width-big, var.$height-big, "", "", 0, 40%);
             @include mix.transform("", 20%);
         }
 
@@ -295,7 +300,29 @@ main {
             @include mix.transform(50%, 10%)
         }
     }
+}
 
-    /* ========== SC Footer ========== */
-    
+/* ========== SC Footer ========== */
+
+.footer {
+    @include mix.blackwhite(var.$color-white, var.$color-black);
+    position: relative;
+
+    @include mix.overflow(hidden);
+    .div__footer-white {
+        position: absolute;
+        @include mix.imgXZPos(100%, "", 50%, "", "", "");
+        @include mix.fontdef('Inter', 5rem);
+        @include mix.blackwhite(var.$color-black, var.$color-white);
+        transition: all;
+        @include mix.transform(200px, "");
+        @include mix.rotate("", "", 45deg);
+        p {
+
+            span {
+                @include mix.blackwhite(var.$color-white, var.$color-white);
+                @include mix.textStroke(1px, var.$color-black);
+            }
+        }
+    }
 }

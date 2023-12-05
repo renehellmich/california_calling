@@ -71,7 +71,6 @@ main {
   /* ========== Golden Bear ========== */
   /* ========== SC ROUND ========== */
   /* ========== SC BEAR SMALL ========== */
-  /* ========== SC Footer ========== */
 }
 main .sc__beginning {
   padding-left: 4rem;
@@ -260,6 +259,7 @@ main .sc__golden-bear #img_small-bear {
 main .sc__round-img {
   height: 420px;
   position: relative;
+  overflow: hidden;
 }
 main .sc__round-img img {
   position: absolute;
@@ -347,6 +347,39 @@ main .sc__poppy #img_small-bear {
   left: 10%;
   transform: translateX(50%);
   transform: translateY(10%);
+}
+
+/* ========== SC Footer ========== */
+.footer {
+  color: #ffffff;
+  background-color: #000000;
+  position: relative;
+  overflow: hidden;
+}
+.footer .div__footer-white {
+  position: absolute;
+  width: 100%;
+  height: "";
+  top: 50%;
+  right: "";
+  bottom: "";
+  left: "";
+  font-family: "Inter";
+  font-size: 5rem;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all;
+  transform: translateX(200px);
+  transform: translateY("");
+  transform: rotateX("");
+  transform: rotateY("");
+  transform: rotateZ(45deg);
+}
+.footer .div__footer-white p span {
+  color: #ffffff;
+  background-color: #ffffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000000;
 }
 
 /*# sourceMappingURL=style.css.map */
