@@ -70,6 +70,8 @@ main {
   /* ========== Section Action ========== */
   /* ========== Golden Bear ========== */
   /* ========== SC ROUND ========== */
+  /* ========== SC BEAR SMALL ========== */
+  /* ========== SC Footer ========== */
 }
 main .sc__beginning {
   padding-left: 4rem;
@@ -252,6 +254,97 @@ main .sc__golden-bear #img_small-bear {
   right: "";
   bottom: 0;
   left: 60%;
+  transform: translateX(50%);
+  transform: translateY(10%);
+}
+main .sc__round-img {
+  height: 420px;
+  position: relative;
+}
+main .sc__round-img img {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -100px;
+  right: -137px;
+  bottom: "";
+  left: "";
+  animation: rotate360 3s linear 0s infinite forwards;
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+main .sc__poppy {
+  height: 1320px;
+  background-color: rgb(245, 245, 245);
+  margin: 0 auto;
+  padding-bottom: 160px;
+  color: #000000;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+main .sc__poppy .div__bear_description {
+  width: 1096px;
+  margin: 0 auto;
+  margin-top: 180px;
+}
+main .sc__poppy .div__bear_description .p__page {
+  font-family: "WorkSans";
+  font-size: 1.25rem;
+}
+main .sc__poppy .div__bear_description .div__descr-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+main .sc__poppy .div__bear_description .div__descr-flex h3 {
+  font-family: "Inter";
+  font-size: 5.25rem;
+}
+main .sc__poppy .div__bear_description .div__descr-flex .p__description {
+  font-family: "Inter";
+  font-size: 1.75rem;
+  width: 540px;
+}
+main .sc__poppy .div__bear_description .div__descr-flex .p__description span {
+  font-family: "WorkSans";
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+main .sc__poppy .div__bear_img {
+  position: relative;
+  width: 1096px;
+  margin: 0 auto;
+}
+main .sc__poppy .img__bear {
+  position: absolute;
+}
+main .sc__poppy #img_big-bear {
+  width: 731px;
+  height: 731px;
+  top: "";
+  right: "";
+  bottom: 0;
+  left: 40%;
+  transform: translateX("");
+  transform: translateY(20%);
+}
+main .sc__poppy #img_small-bear {
+  width: 366px;
+  height: 472px;
+  top: "";
+  right: "";
+  bottom: 0;
+  left: 10%;
   transform: translateX(50%);
   transform: translateY(10%);
 }
