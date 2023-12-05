@@ -307,17 +307,73 @@ main {
 .footer {
     @include mix.blackwhite(var.$color-white, var.$color-black);
     position: relative;
+    padding-left: var.$padding-side;
+    padding-bottom: 5rem;
 
     @include mix.overflow(hidden);
+
+    article {
+        width: 520px;
+        @include mix.flex_between_column;
+        gap: 1rem;
+        margin-bottom: 4rem;
+
+        .a__join {
+            @include mix.fontdef('WorkSans', .875rem);
+            color: var.$color-white;
+            text-decoration: none;
+        }
+
+        p {
+            @include mix.fontdef('Inter', 1.5rem);
+            line-height: 2.875rem;
+        }
+
+        .a__rsvp {
+            @include mix.aTag(none, var.$color-white);
+            @include mix.fontdef('WorkSans', 1.25rem);
+            width: min-content;
+            padding: 1rem 2rem;
+            border: 1px solid var.$color-white;
+        }
+    }
+
+    nav {
+        @include mix.flex_between_row;
+        align-items: flex-start;
+        .div__nav_footer {
+            @include mix.flex_between_column;
+            justify-content: flex-start;
+            gap: .875rem;
+
+            .div__links {
+                @include mix.flex_between_row;
+                justify-content: flex-start;
+                gap: .5rem;
+
+                .img__link {
+                    width: 1rem;
+                    height: 0.875rem;
+                }
+            }
+        }
+        figure {
+            padding-right: 10rem;
+            .fig__img {
+                width: 50px;
+            }
+        }
+    }
+
     .div__footer-white {
         position: absolute;
-        @include mix.imgXZPos(100%, "", 50%, "", "", "");
         @include mix.fontdef('Inter', 5rem);
         @include mix.blackwhite(var.$color-black, var.$color-white);
-        transition: all;
-        @include mix.transform(200px, "");
-        @include mix.rotate("", "", 45deg);
+        @include mix.imgXZPos(100%, "", "", 0, 0, "");
+        @include mix.stringtransform;
+
         p {
+            @include mix.stringanimation;
 
             span {
                 @include mix.blackwhite(var.$color-white, var.$color-white);

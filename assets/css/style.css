@@ -354,26 +354,101 @@ main .sc__poppy #img_small-bear {
   color: #ffffff;
   background-color: #000000;
   position: relative;
+  padding-left: 4rem;
+  padding-bottom: 5rem;
   overflow: hidden;
+}
+.footer article {
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.footer article .a__join {
+  font-family: "WorkSans";
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer article p {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  line-height: 2.875rem;
+}
+.footer article .a__rsvp {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "WorkSans";
+  font-size: 1.25rem;
+  width: min-content;
+  padding: 1rem 2rem;
+  border: 1px solid #ffffff;
+}
+.footer nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer nav .div__nav_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.875rem;
+}
+.footer nav .div__nav_footer .div__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.footer nav .div__nav_footer .div__links .img__link {
+  width: 1rem;
+  height: 0.875rem;
+}
+.footer nav figure {
+  padding-right: 10rem;
+}
+.footer nav figure .fig__img {
+  width: 50px;
 }
 .footer .div__footer-white {
   position: absolute;
-  width: 100%;
-  height: "";
-  top: 50%;
-  right: "";
-  bottom: "";
-  left: "";
   font-family: "Inter";
   font-size: 5rem;
   color: #000000;
   background-color: #ffffff;
-  transition: all;
-  transform: translateX(200px);
-  transform: translateY("");
-  transform: rotateX("");
-  transform: rotateY("");
-  transform: rotateZ(45deg);
+  width: 100%;
+  height: "";
+  top: "";
+  right: 0;
+  bottom: 0;
+  left: "";
+  transform: translateX(50%) rotateZ(45deg);
+}
+.footer .div__footer-white p {
+  animation: bildlauf 10s linear 0s infinite forwards;
+}
+@keyframes bildlauf {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .footer .div__footer-white p span {
   color: #ffffff;
