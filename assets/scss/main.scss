@@ -68,6 +68,7 @@ header {
             @include mix.rsvp;
             &:hover {
                 cursor:pointer;
+                @include mix.blackwhite(var.$color-black, var.$color-white);
             }
         }
     }
@@ -344,6 +345,7 @@ main {
             @include mix.rsvp;
             &:hover {
                 cursor:pointer;
+                @include mix.blackwhite(var.$color-black, var.$color-white);
             }
         }
     }

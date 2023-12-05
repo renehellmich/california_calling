@@ -78,6 +78,8 @@ header div a {
 }
 header div a:hover {
   cursor: pointer;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* ========== MAIN ========== */
@@ -402,6 +404,8 @@ main .sc__poppy #img_small-bear {
 }
 .footer article .a__rsvp:hover {
   cursor: pointer;
+  color: #000000;
+  background-color: #ffffff;
 }
 .footer nav {
   display: flex;
