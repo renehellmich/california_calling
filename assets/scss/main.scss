@@ -21,11 +21,19 @@ html {
 
 /* ========== HEADER ========== */
 header {
-    padding: var.$header-top var.$padding-side var.$header-top var.$padding-side;
+    padding: 0 var.$padding-side var.$header-top var.$padding-side;
     background: var.$color-black;
     color: var.$color-white;
     text-align: center;
 
+    .div__top {
+        height: 150px;
+        width: 1px;
+        background-color: var.$color-grey;
+        @include mix.flex_center_row;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
     article {
         @include mix.flex_center_column;
 
@@ -53,10 +61,14 @@ header {
         }
 
         a {
-            @include mix.aTag(none, var.$color-white);
-            @include mix.fontdef('WorkSans', 1.25rem);
-            padding: 1rem 2rem;
-            border: 1px solid var.$color-white;
+            // @include mix.aTag(none, var.$color-white);
+            // @include mix.fontdef('WorkSans', 1.25rem);
+            // padding: 1rem 2rem;
+            // border: 1px solid var.$color-white;
+            @include mix.rsvp;
+            &:hover {
+                cursor:pointer;
+            }
         }
     }
 }
@@ -73,13 +85,13 @@ main {
 
         h2 {
             @include mix.fontdef('Inter', 5.875rem);
-            width: 80vw;
+            width: 45vw;
         }
 
         .div__california {
             @include mix.flex_between_row;
             align-items: flex-end;
-            width: calc(100% - var.$padding-side);
+            width: 100%;
             height: 540px;
             margin-top: var.$margin-div_info;
 
@@ -96,7 +108,7 @@ main {
             }
 
             img {
-                height: 100%
+                height: 100%;
             }
         }
     }
@@ -159,7 +171,7 @@ main {
         #img7 {
             @include mix.imgXZPos(440px, 300px, "", center, 0px, ""
             );
-            transform: translateX(50%);
+            transform: translateX(200%);
         }
 
     }
@@ -244,7 +256,7 @@ main {
         height: 1320px;
         background-color: var.$color-grey;
         margin: 0 auto;
-        padding-bottom: 160px;
+        padding-bottom: 11rem;
         @include mix.blackwhite(var.$color-black, var.$color-grey);
         @include mix.flex_between_column;
         justify-content: space-between;
@@ -307,8 +319,7 @@ main {
 .footer {
     @include mix.blackwhite(var.$color-white, var.$color-black);
     position: relative;
-    padding-left: var.$padding-side;
-    padding-bottom: 5rem;
+    padding: 5rem 0 5rem var.$padding-side;
 
     @include mix.overflow(hidden);
 
@@ -330,11 +341,10 @@ main {
         }
 
         .a__rsvp {
-            @include mix.aTag(none, var.$color-white);
-            @include mix.fontdef('WorkSans', 1.25rem);
-            width: min-content;
-            padding: 1rem 2rem;
-            border: 1px solid var.$color-white;
+            @include mix.rsvp;
+            &:hover {
+                cursor:pointer;
+            }
         }
     }
 
@@ -369,10 +379,11 @@ main {
         position: absolute;
         @include mix.fontdef('Inter', 5rem);
         @include mix.blackwhite(var.$color-black, var.$color-white);
-        @include mix.imgXZPos(100%, "", "", 0, 0, "");
+        @include mix.imgXZPos(var.$max-width, "", "", 0, 0, "");
         @include mix.stringtransform;
 
         p {
+            width: 100%;
             @include mix.stringanimation;
 
             span {

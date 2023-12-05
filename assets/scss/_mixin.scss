@@ -1,5 +1,7 @@
 //======= Global ===== //
 @use 'variables' as var;
+
+
 @mixin flex_center_column {
     display: flex;
     flex-direction: column;
@@ -49,6 +51,14 @@
 @mixin textStroke($width, $color) {
     -webkit-text-stroke-width: $width;
     -webkit-text-stroke-color: $color;
+}
+
+@mixin rsvp {
+    @include aTag(none, var.$color-white);
+    @include fontdef('WorkSans', 1.25rem);
+    width: min-content;
+    padding: 1rem 2.5rem;
+    border: 1px solid var.$color-white;
 }
 
 
@@ -121,3 +131,4 @@
 }
 
 //======= Footer ===== //
+
